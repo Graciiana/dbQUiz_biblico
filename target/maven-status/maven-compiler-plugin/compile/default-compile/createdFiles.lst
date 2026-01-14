@@ -1,0 +1,9 @@
+mvc/model/Resposta.class
+mvc/model/Pergunta.class
+mvc/service/RespostaService.class
+mvc/view/View.class
+mvc/Conector.class
+mvc/service/PerguntaService.class
+mvc/dao/PerguntaDao.class
+mvc/Main.class
+mvc/dao/RespostaDao.class
