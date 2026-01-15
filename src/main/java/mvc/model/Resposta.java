@@ -11,4 +11,9 @@ public class Resposta {
     private String texto;
     private int correta;
     private Pergunta pergunta;
+
+    @Override
+    public String toString(){
+        return getIdResposta()+" " + getTexto();
+    }
 }

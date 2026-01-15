@@ -9,6 +9,7 @@ import mvc.Conector;
 import mvc.dao.PerguntaDao;
 import mvc.dao.RespostaDao;
 import mvc.model.Pergunta;
+import mvc.model.Resposta;
 
 public class View {
 
@@ -31,13 +32,22 @@ public class View {
 
                 switch (opc) {
                     case 1:
+
                         List<Pergunta> perguntas = perguntaDao.lista();
-                        for(Pergunta p: perguntas) {
+                        System.out.println("Jogue connosco, responda as perguntas \n");
+                        for (Pergunta p : perguntas) {
                             System.out.println(p);
+                            List<Resposta> respostas = respostaDao.buscarRespostas(p.getId_pergunta());
+                            for (Resposta r : respostas) {
+                                System.out.println(r);
+                            }
+                            int correta = teclado.nextInt();
+                            teclado.nextLine();
+                            //Service
+                            System.out.println("deia Enter caso deseje continuar!");
+                            teclado.nextLine();
                         }
-                        System.out.println("deia Enter caso deseje continuar!");
-                        teclado.nextLine();
-                       
+
                         break;
 
                     case 2:
@@ -49,7 +59,7 @@ public class View {
             }
 
         } catch (SQLException e) {
-            System.err.println("Erro de base de dados."+e.getMessage());
+            System.err.println("Erro de base de dados." + e.getMessage());
         }
     }
 
