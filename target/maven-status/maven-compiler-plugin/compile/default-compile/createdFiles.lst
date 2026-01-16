@@ -1,3 +1,4 @@
+mvc/service/ResultadoResposta.class
 mvc/model/Resposta.class
 mvc/model/Pergunta.class
 mvc/service/RespostaService.class

@@ -10,6 +10,8 @@ import mvc.dao.PerguntaDao;
 import mvc.dao.RespostaDao;
 import mvc.model.Pergunta;
 import mvc.model.Resposta;
+import mvc.service.RespostaService;
+import mvc.service.ResultadoResposta;
 
 public class View {
 
@@ -17,10 +19,11 @@ public class View {
         Boolean carregar = true;
         Scanner teclado = new Scanner(System.in);
 
-        try {
-            Connection con = Conector.conectar();
+        try (Connection con = Conector.conectar();) {
+
             PerguntaDao perguntaDao = new PerguntaDao(con);
             RespostaDao respostaDao = new RespostaDao(con);
+            RespostaService respostaService = new RespostaService(con);
 
             while (carregar) {
                 System.out.println("================== Menu ==================");
@@ -41,9 +44,18 @@ public class View {
                             for (Resposta r : respostas) {
                                 System.out.println(r);
                             }
-                            int correta = teclado.nextInt();
+                            // Service
+                            long idRespostaEscolhida = teclado.nextLong();
                             teclado.nextLine();
-                            //Service
+
+                            ResultadoResposta resultado = respostaService.responder(idRespostaEscolhida);
+
+                            if (resultado == ResultadoResposta.CORRETA) {
+                                System.out.println("✅ Resposta correta!");
+                            } else {
+                                System.out.println("❌ Resposta errada!");
+                            }
+
                             System.out.println("deia Enter caso deseje continuar!");
                             teclado.nextLine();
                         }
@@ -61,6 +73,7 @@ public class View {
         } catch (SQLException e) {
             System.err.println("Erro de base de dados." + e.getMessage());
         }
+
     }
 
 }

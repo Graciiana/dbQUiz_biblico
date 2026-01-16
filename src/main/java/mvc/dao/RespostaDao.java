@@ -7,6 +7,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.mysql.cj.xdevapi.PreparableStatement;
+
 import mvc.model.Pergunta;
 import mvc.model.Resposta;
 
@@ -46,5 +48,25 @@ public class RespostaDao {
 
         return respostas;
     }
+    
+
+    public boolean respostaEstaCorreta(long idResposta) throws SQLException {
+    String sql = """
+        SELECT correta
+        FROM resposta
+        WHERE id_resposta = ?
+    """;
+
+    PreparedStatement ps = connec.prepareStatement(sql);
+    ps.setLong(1, idResposta);
+
+    ResultSet rs = ps.executeQuery();
+
+    if (rs.next()) {
+        return rs.getInt("correta") == 1;
+    }
+
+    return false;
+}
 
 }

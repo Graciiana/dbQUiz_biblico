@@ -1,0 +1,86 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://marketplace.visualstudio.com/items?itemName=pomdtr.excalidraw-editor",
+  "elements": [
+    {
+      "id": "UWTTzPY_y20SBi0ejgFII",
+      "type": "rectangle",
+      "x": 317,
+      "y": 196,
+      "width": 227.00000000000003,
+      "height": 285,
+      "angle": 0,
+      "strokeColor": "#f08c00",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "a0",
+      "roundness": {
+        "type": 3
+      },
+      "seed": 188445403,
+      "version": 85,
+      "versionNonce": 356508600,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "type": "text",
+          "id": "o8uUx7f0YlI_ECeFSgM_1"
+        }
+      ],
+      "updated": 1768575121529,
+      "link": null,
+      "locked": false
+    },
+    {
+      "id": "o8uUx7f0YlI_ECeFSgM_1",
+      "type": "text",
+      "x": 325.02010345458984,
+      "y": 201,
+      "width": 210.9597930908203,
+      "height": 275,
+      "angle": 0,
+      "strokeColor": "#f08c00",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "a1",
+      "roundness": null,
+      "seed": 752839451,
+      "version": 169,
+      "versionNonce": 1345709496,
+      "isDeleted": false,
+      "boundElements": [],
+      "updated": 1768575293097,
+      "link": null,
+      "locked": false,
+      "text": "Acrescer Dados ao\nservice. ja\n------\nAdicionar\naleatoriedade aos\ndados\n\n\n\nPerguntas apareceram\npor niveis.",
+      "fontSize": 20,
+      "fontFamily": 5,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "UWTTzPY_y20SBi0ejgFII",
+      "originalText": "Acrescer Dados ao service. ja\n------\nAdicionar aleatoriedade aos dados\n\n\n\nPerguntas apareceram por niveis.",
+      "autoResize": true,
+      "lineHeight": 1.25
+    }
+  ],
+  "appState": {
+    "gridSize": 20,
+    "gridStep": 5,
+    "gridModeEnabled": false,
+    "viewBackgroundColor": "#18181818"
+  },
+  "files": {}
+}
