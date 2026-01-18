@@ -1,6 +1,7 @@
 package mvc.view;
 
 import java.sql.SQLException;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 import java.sql.Connection;
@@ -10,6 +11,7 @@ import mvc.dao.PerguntaDao;
 import mvc.dao.RespostaDao;
 import mvc.model.Pergunta;
 import mvc.model.Resposta;
+import mvc.service.PerguntaService;
 import mvc.service.RespostaService;
 import mvc.service.ResultadoResposta;
 
@@ -37,10 +39,17 @@ public class View {
                     case 1:
 
                         List<Pergunta> perguntas = perguntaDao.lista();
+                       
+                        
                         System.out.println("Jogue connosco, responda as perguntas \n");
+
                         for (Pergunta p : perguntas) {
                             System.out.println(p);
+
                             List<Resposta> respostas = respostaDao.buscarRespostas(p.getId_pergunta());
+
+                            Collections.shuffle(respostas);
+
                             for (Resposta r : respostas) {
                                 System.out.println(r);
                             }

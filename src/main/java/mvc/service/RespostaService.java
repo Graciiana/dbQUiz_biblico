@@ -5,7 +5,6 @@ import java.sql.SQLException;
 import java.util.List;
 
 import mvc.dao.RespostaDao;
-import mvc.model.Resposta;
 
 public class RespostaService {
     private RespostaDao respostaDao;

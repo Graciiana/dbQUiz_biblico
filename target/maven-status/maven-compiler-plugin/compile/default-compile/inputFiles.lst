@@ -2,6 +2,7 @@
 /home/graciana/Documentos/PROJECTOS - JAVA/teste-banco/quiz/quiz_biblico/src/main/java/mvc/Main.java
 /home/graciana/Documentos/PROJECTOS - JAVA/teste-banco/quiz/quiz_biblico/src/main/java/mvc/dao/PerguntaDao.java
 /home/graciana/Documentos/PROJECTOS - JAVA/teste-banco/quiz/quiz_biblico/src/main/java/mvc/dao/RespostaDao.java
+/home/graciana/Documentos/PROJECTOS - JAVA/teste-banco/quiz/quiz_biblico/src/main/java/mvc/model/Dificuldade.java
 /home/graciana/Documentos/PROJECTOS - JAVA/teste-banco/quiz/quiz_biblico/src/main/java/mvc/model/Pergunta.java
 /home/graciana/Documentos/PROJECTOS - JAVA/teste-banco/quiz/quiz_biblico/src/main/java/mvc/model/Resposta.java
 /home/graciana/Documentos/PROJECTOS - JAVA/teste-banco/quiz/quiz_biblico/src/main/java/mvc/service/PerguntaService.java
