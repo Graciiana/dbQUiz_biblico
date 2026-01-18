@@ -13,6 +13,6 @@ public class Pergunta {
 
 @Override
 public String toString() {
-    return id_pergunta+"--" +" Pergunta: "+getTexto()+ " | Nivel-- "+getDificuldade();
+    return getTexto()+ " | Nivel-- "+getDificuldade();
 }
 }

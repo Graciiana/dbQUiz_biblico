@@ -39,30 +39,37 @@ public class View {
                     case 1:
 
                         List<Pergunta> perguntas = perguntaDao.lista();
-                       
-                        
+                        Collections.shuffle(perguntas);
+
+                        int opcao1 = 1;
+
                         System.out.println("Jogue connosco, responda as perguntas \n");
 
                         for (Pergunta p : perguntas) {
-                            System.out.println(p);
+                            System.out.println(opcao1 + "--" + p);
+                            opcao1++;
 
                             List<Resposta> respostas = respostaDao.buscarRespostas(p.getId_pergunta());
-
                             Collections.shuffle(respostas);
 
+                            int opcao = 1;
                             for (Resposta r : respostas) {
-                                System.out.println(r);
+                                System.out.println(opcao + " - " + r.getTexto());
+                                opcao++;
                             }
                             // Service
-                            long idRespostaEscolhida = teclado.nextLong();
+
+                            int escolha = teclado.nextInt();
                             teclado.nextLine();
+
+                            long idRespostaEscolhida = respostas.get(escolha - 1).getIdResposta();
 
                             ResultadoResposta resultado = respostaService.responder(idRespostaEscolhida);
 
                             if (resultado == ResultadoResposta.CORRETA) {
-                                System.out.println("✅ Resposta correta!");
+                                System.out.println("✅");
                             } else {
-                                System.out.println("❌ Resposta errada!");
+                                System.out.println("❌");
                             }
 
                             System.out.println("deia Enter caso deseje continuar!");
